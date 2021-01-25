@@ -1,0 +1,47 @@
+//***** Mixins *****//
+
+// Prefixer
+@mixin prefixer( $property, $value, $prefixes:()){
+    @each $prefix in $prefixes{
+        #{'-' + $prefix + '-' + $property} : $value;
+    }
+    #{$property}:$value;
+}
+
+// border-radius
+@mixin bRadius($r) {
+    @include prefixer(border-radius, $r, webkit moz o ms)
+}
+
+// transition
+@mixin transition($args...){
+    @include prefixer(transition,$args, webkit moz o ms)
+}
+
+// font
+@mixin font($fontSize,$fontWeight) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+}
+
+//Media Queries
+@mixin maxXS {
+    @media (max-width:576px) {
+        @content;
+    }
+}
+@mixin maxSm {
+    @media (max-width:767px) {
+        @content;
+    }
+}
+@mixin maxMd {
+    @media (max-width:992px) {
+        @content;
+    }
+}
+@mixin maxLg {
+    @media (max-width:1200px) {
+        @content;
+    }
+}

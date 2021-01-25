@@ -1,0 +1,66 @@
+/***** Coverage Style *****/
+
+// Variables
+@import "../helpers/variables";
+
+//Mixins
+@import "../helpers/mixins";
+
+.coverage {
+    background: #F2F3FC;
+    min-height: 440px;
+    padding: 75px 0;
+    h2 {
+        color: $textColor;
+        @include font(50px, 700);
+        margin-bottom: 40px;
+    }
+    .blocks {
+        align-items: center;
+        justify-content: center;
+        .block {
+            height: 185px;
+            background: #fff;
+            border: 1px solid #BABDCF;
+            @include bRadius(2px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 15px;
+            @include transition(all .4s ease-in-out);
+            margin-bottom: 40px;
+            @include maxSm {
+                height: 140px;
+                margin: {
+                    left: 10px;
+                    right: 10px;
+                }
+            }
+            @include maxXS {
+                flex-direction: row;
+                justify-content: flex-start;
+                height: 60px;
+                line-height: 60px;
+                margin-bottom: 10px;
+            }
+            img {
+                margin-bottom: 15px;
+                @include maxSm {
+                    margin: 15px;
+                }
+            }
+            h4 {
+                color: $textColor;
+                @include font(16px,600);
+                @include transition(all .5s ease-in-out);
+            }
+            &:hover {
+                background: #A4AAD0;
+                h4 {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

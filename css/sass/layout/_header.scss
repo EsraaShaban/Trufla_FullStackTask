@@ -1,0 +1,163 @@
+/***** Header Style *****/
+// Variables
+@import "../helpers/variables";
+// Mixins
+@import "../helpers/mixins";
+/*Buttons*/
+@import "../components/buttons";
+
+header {
+    .upperBar {
+        background: #fff;
+        height: 80px;
+        line-height: 80px;
+        .logo {
+            width: 90px;
+            height: 40px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .contacts {
+            a {
+                &.link {
+                    color: $textColor;
+                    text-transform: uppercase;
+                    @include font(14px,700);
+                    padding: 0 20px;
+                    i {
+                        padding-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .menu {
+        background: $primaryColor;
+        height: 50px;
+        line-height: 50px;
+        @include maxSm {
+            display: none;
+        }
+        .list {
+            a {
+                color: rgba(255,255,255,0.9);
+                @include font(18px,400);
+                padding: 0 50px;
+                &.active {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+.navbar {
+    background: #fff;
+    height: 54px;
+    padding: 0 1rem;
+    position: relative;
+    .main {
+        .navbar-toggler {
+            color: $textColor;
+            @include font(18px, 700);
+            padding: 0;
+            border: 0;
+            @include bRadius(0);
+            margin-right: 8px;
+            outline: none;
+            &:focus {
+                outline: none;
+            }
+        }
+        a {
+            img {
+                width: 75px;
+                height: 27px;
+            }
+        }
+    }
+    .contacts {
+        a {
+            &.link {
+                color: $textColor;
+                @include font(18px,700);
+                padding: 0 10px;
+                text-transform: uppercase;
+            }
+            &.button {
+                padding: 7px 15px;
+            }
+        }
+    }
+    .navbar-collapse {
+        background: #fff;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 54px;
+        padding: 0 1rem;
+        padding-bottom: 30px;
+        .contacts {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 25px;
+            a {
+                display: block;
+                margin: 8px 0;
+                &.link {
+                    @include font(14px,700);
+                    i {
+                        padding-right: 5px;
+                    }
+                }
+                &.button {
+                    padding: 10px 15px;
+                }
+            }
+        }
+    }
+}
+
+
+// Bootstrap Customization
+.navbar-light {
+    .navbar-nav {
+        .nav-item {
+            border-bottom: 1px solid #BBBED0;
+            padding: 10px 0;
+            .nav-link {
+                color: $textColor;
+                @include font(18px, 500);
+                .dropdown-item {
+                    &.active, &:focus {
+                        color: $textColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dropdown-toggle::after {
+    position: absolute;
+    right: 0;
+    top: 30px;
+}
+.dropdown-menu {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    @include bRadius(0);
+}
+.dropdown-item {
+    padding: .45rem 0;
+    color: #7C809B;
+    @include font(14px, 500);
+    &:hover {
+        background: transparent;
+    }
+}

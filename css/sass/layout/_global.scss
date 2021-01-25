@@ -1,0 +1,15 @@
+// Global Style
+
+// Variables
+@import "../helpers/variables";
+
+//Mixins
+@import "../helpers/mixins";
+
+* , *:before, *:after  {
+    @include prefixer(box-sizing, border-box, webkit moz o);
+}
+body { background: #fff; margin: 0; padding: 0; }
+ul { list-style: none; margin:0; padding: 0; }
+a, a:hover { text-decoration: none; }
+a, span, p, h1, h2, h3, h4, h5, h6, strong, li { font-family: $mainFont; }

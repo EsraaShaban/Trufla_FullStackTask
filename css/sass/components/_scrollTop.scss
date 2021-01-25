@@ -1,0 +1,24 @@
+/***** ScrollUp *****/
+
+// Variables
+@import "../helpers/variables";
+
+//Mixins
+@import "../helpers/mixins";
+
+#scroll-top {
+    @include prefixer(box-shadow, 1px 3px 8px 0px rgba(0, 0, 0, 0.2), webkit moz o ms);
+    width: 40px; 
+    height: 40px; 
+    line-height: 35px;
+    @include bRadius(6px);
+    text-align: center; 
+    background: $secondaryColor; 
+    color: #fff; 
+    position: fixed; 
+    right: 15px; 
+    bottom: 40px; 
+    z-index: 99; 
+    display: none; 
+    cursor: pointer;
+}

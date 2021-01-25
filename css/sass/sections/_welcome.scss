@@ -1,0 +1,44 @@
+/***** Welcome Style *****/
+
+// Variables
+@import "../helpers/variables";
+
+//Mixins
+@import "../helpers/mixins";
+
+.welcome {
+    background: url(../../images/header_bg.jpg) center center no-repeat;
+    @include prefixer(background-size, cover, webkit moz o);
+    min-height: 623px; 
+    .content {
+        width: 65%;
+        padding: 130px 0;
+        color: #fff;
+        @include maxMd {
+            width: 95%;
+            margin: auto;
+            padding: 200px 0;
+            text-align: center;
+        }
+        h1 {
+            @include font(66px,700);
+            @include maxLg {
+                @include font(38px,700);
+            }
+        }
+        p {
+            @include font(18px,400);
+            line-height: 30px;
+            margin-top: 30px;
+            margin-bottom: 85px;
+            width: 90%;
+            @include maxLg {
+                @include font(16px,400);
+                line-height: 24px;
+            }
+            @include maxMd {
+                width: 100%;
+            }
+        }
+    }
+}

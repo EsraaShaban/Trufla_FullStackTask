@@ -1,0 +1,51 @@
+/***** About Style *****/
+
+// Variables
+@import "../helpers/variables";
+
+//Mixins
+@import "../helpers/mixins";
+
+.about {
+    background: #fff;
+    padding: 75px 20px;
+    h2 {
+        color: $textColor;
+        @include font(38px, 700);
+    }
+    p {
+        color: #170307;
+        @include font(20px, 500);
+        line-height: 35px;
+        margin-top: 35px;
+        margin-bottom: 70px;
+        width: 86%;
+        &.second {
+            color: $textColor;
+            @include font(18px, 400);
+            line-height: 30px;
+            margin-bottom: 25px; 
+            width: 84%;
+        }
+    }
+    h4 {
+        color: $textColor;
+        @include font(30px, 700);
+    }
+    ul {
+        margin-left: 25px;
+        li {
+            color: $textColor;
+            @include font(20px,700);
+            margin-bottom: 10px;
+            &:before {
+                content: "\f058"; 
+                font-family: FontAwesome;
+                display: inline-block;
+                margin-left: -1.3em; 
+                width: 1.3em; 
+                color: #6F759D;
+            }
+        }
+    }
+}

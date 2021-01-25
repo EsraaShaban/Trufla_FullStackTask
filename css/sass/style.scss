@@ -1,0 +1,19 @@
+/******** Main Style ********/
+
+// Variables
+@import "../sass/helpers/variables";
+//Mixins
+@import "../sass/helpers/mixins";
+
+/*Global*/
+@import "../sass/layout/global";
+/*Header*/
+@import "../sass/layout/header";
+/*Welcome*/
+@import "../sass/sections/welcome";
+/*Coverage*/
+@import "../sass/sections/coverage";
+/*About*/
+@import "../sass/sections/about";
+/*Scroll Top*/
+@import "../sass/components/scrollTop";
